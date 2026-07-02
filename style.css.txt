@@ -1,0 +1,55 @@
+Text.css
+
+body{
+font-family: Arial, sans-serif;
+background:#eef2f3;
+margin:0;
+padding:0;
+}
+
+.container{
+max-width:700px;
+margin:40px auto;
+background:white;
+padding:25px;
+border-radius:16px;
+box-shadow:0 8px 25px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+h1{
+color:#2e7d32;
+}
+
+input{
+width:100%;
+padding:15px;
+margin-top:15px;
+border-radius:10px;
+border:1px solid #ccc;
+font-size:16px;
+}
+
+button{
+width:100%;
+padding:15px;
+margin-top:10px;
+border:none;
+border-radius:10px;
+background:#2e7d32;
+color:white;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#1b5e20;
+}
+
+.card{
+margin-top:20px;
+text-align:left;
+padding:20px;
+border-radius:12px;
+background:#f9f9f9;
+}
