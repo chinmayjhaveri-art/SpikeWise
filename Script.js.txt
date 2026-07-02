@@ -1,0 +1,84 @@
+Script.js
+
+const foods = {
+apple:{
+calories:95,
+protein:"0.5g",
+carbs:"25g",
+sugar:"19g",
+fiber:"4.4g",
+spike:"🟢 Low",
+score:92,
+tip:"Great daily fruit with fiber."
+},
+
+banana:{
+calories:105,
+protein:"1.3g",
+carbs:"27g",
+sugar:"14g",
+fiber:"3.1g",
+spike:"🟡 Moderate",
+score:88,
+tip:"Good energy food, best with nuts."
+},
+
+rice:{
+calories:205,
+protein:"4.2g",
+carbs:"45g",
+sugar:"0g",
+fiber:"0.6g",
+spike:"🔴 High",
+score:55,
+tip:"Try brown rice for better fiber."
+},
+
+pizza:{
+calories:285,
+protein:"12g",
+carbs:"36g",
+sugar:"4g",
+fiber:"2.5g",
+spike:"🟡 Moderate",
+score:60,
+tip:"Add veggies for balance."
+}
+};
+
+function searchFood(){
+
+let input = document.getElementById("foodInput").value.toLowerCase().trim();
+
+let food = foods[input];
+
+let result = document.getElementById("result");
+
+result.style.display = "block";
+
+if(food){
+
+document.getElementById("foodName").innerText = input.toUpperCase();
+document.getElementById("calories").innerText = food.calories;
+document.getElementById("protein").innerText = food.protein;
+document.getElementById("carbs").innerText = food.carbs;
+document.getElementById("sugar").innerText = food.sugar;
+document.getElementById("fiber").innerText = food.fiber;
+document.getElementById("spike").innerText = food.spike;
+document.getElementById("score").innerText = food.score + "/100";
+document.getElementById("tip").innerText = food.tip;
+
+}else{
+
+document.getElementById("foodName").innerText = "Food not found";
+document.getElementById("calories").innerText = "-";
+document.getElementById("protein").innerText = "-";
+document.getElementById("carbs").innerText = "-";
+document.getElementById("sugar").innerText = "-";
+document.getElementById("fiber").innerText = "-";
+document.getElementById("spike").innerText = "-";
+document.getElementById("score").innerText = "-";
+document.getElementById("tip").innerText = "Try apple, banana, rice, pizza";
+}
+
+}
